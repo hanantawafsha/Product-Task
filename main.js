@@ -4,6 +4,7 @@ var descriptionInput = document.querySelector("#productDescription");
 var priceInput = document.querySelector("#productPrice");
 
 var products = [];
+//console.log(typeof(products));
 
 registerForm.onsubmit = function(e) {
     e.preventDefault();
@@ -13,6 +14,7 @@ registerForm.onsubmit = function(e) {
         description: descriptionInput.value,
         price: priceInput.value
     };
+
     products.push(product);
   //  console.log(products);
     updateProductList();
@@ -28,6 +30,7 @@ function updateProductList(){
         <td> ${products[i].price} </td>
         </tr>`;
     }
-    
+
     document.querySelector("tbody").innerHTML = tableRow;
 }
+//console.log(updateProductList);
